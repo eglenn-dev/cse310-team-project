@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+    min-height: 2vh;
+}
+
+.head {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.headitem {
+    margin-right: 12rem;
+    margin-top: 1rem;
+}
