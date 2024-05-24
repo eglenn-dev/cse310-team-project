@@ -1,11 +1,17 @@
 import Link from 'next/link';
 import styles from "./navbar.module.css";
+import Image from 'next/image';
 
 export default function NavBar() {
     return (
-      <div>
+      <div className={styles.header}> 
         <main className={styles.main}>
-          <h1>PyCode Educator</h1>
+          <h1><Image
+            src='/header-icon.png'
+            height={60}
+            width={60}
+            alt='Pycode Educator Logo'
+          /></h1>
             <div>
               <ul>
                 <div className={styles.head}>
