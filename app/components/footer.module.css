@@ -1,0 +1,23 @@
+.footer {
+    background-color: #081941;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image {
+    padding: 1em;
+}
+
+.copyright {
+    margin: 1rem auto;
+}
