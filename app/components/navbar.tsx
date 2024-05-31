@@ -1,28 +1,31 @@
-import Link from 'next/link';
+import Link from "next/link";
 import styles from "./navbar.module.css";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function NavBar() {
     return (
-      <div className={styles.header}> 
-        <main className={styles.main}>
-          <h1><Image
-            src='/header-icon.png'
-            height={60}
-            width={60}
-            alt='Pycode Educator Logo'
-          /></h1>
-            <div>
-              <ul>
-                <div className={styles.head}>
-                  <li className={styles.headitem}><Link href="/">Home</Link></li>
-                  <li className={styles.headitem}><Link href="">Learn</Link></li>
-                  <li className={styles.headitem}><Link href="">Lessons</Link></li>
-                  <li className={styles.headitem}><Link href="/about">About</Link></li>
-                </div>
-            </ul>
-          </div>
-        </main>
-      </div>
-      );
-  }
+        <div className={styles.navigation}>
+            <Image
+                className={styles.navImage}
+                src="/header-icon.png"
+                width={50}
+                height={50}
+                alt="Header logo icon"
+            />
+            <div className={styles.navLinksList}>
+                <Link className={styles.navLink} href="/">
+                    Home
+                </Link>
+                <Link className={styles.navLink} href="/lesson1">
+                    Lessons
+                </Link>
+                <Link className={styles.navLink} href="/lesson2">
+                    About Us
+                </Link>
+                <Link className={styles.navLink} href="/lesson3">
+                    Get Started
+                </Link>
+            </div>
+        </div>
+    );
+}

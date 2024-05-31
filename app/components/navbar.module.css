@@ -1,23 +1,26 @@
-.main {
+.navigation {
+    background-color: #0a193d;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem;
-    min-height: 2vh;
+    align-items: center;
 }
 
-.head {
-    list-style-type: none;
+.navImage {
+    margin: 1.5em 2em;
+}
+
+.navLinksList {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    margin-right: 3em;
 }
 
-.header {
-    background-color: #0a193d;
-}
-
-.headitem {
-    margin-right: 13rem;
-    margin-top: 1.5rem;
+.navLink {
+    padding: 1em 0.25em 4px 0.25em;
+    border-bottom: 2px solid white;
 }
