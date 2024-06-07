@@ -35,8 +35,8 @@ export default function Lesson() {
 
         <h2 className={styles.pracHead}>Practice:</h2>
         <form className={styles.codebox}>
-            <textarea name="pythonCode" rows={10} cols = {80}/>
-          <input type="submit" value="Submit"/>
+            <textarea name="pythonCode" rows={20} cols = {80}/>
+          <input className={styles.button} type="submit" value="Submit Code"/>
         </form>
     </main>
   );

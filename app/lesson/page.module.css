@@ -3,10 +3,13 @@
     padding-bottom: 2em;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
 }
 
 .paragraph {
     padding: 5em;
+    padding-left: 7em;
+    padding-right: 7em;
     font-family: 'Poppins', sans-serif;
     line-height: 2em;
     font-weight: 200;
@@ -31,7 +34,17 @@
 }
 
 .codebox{
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 2em;
+    padding: 2em;
+    padding-left: 8em;
+    padding-right: 8em;
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    margin-left: 30em;
+    margin-right: 30em;
+    margin-top: 2em;
+    padding: 2em;
+    font-weight: bolder;
 }
