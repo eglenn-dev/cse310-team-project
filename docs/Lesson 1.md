@@ -1,5 +1,5 @@
+## Welcome to the Python Basics Interactive Tutorial! 
 
-Welcome to the Python Basics Interactive Tutorial!  
 Today we will learn about basic syntax, data types, and basic operations in Python.  
 Let's get started!
 
@@ -39,7 +39,7 @@ print("Is student:", is_student)
 
 ```
 
-Understanding Basic Operators
+## Understanding Basic Operators
 
 Operators in Python are used to perform operations on variables and values.
 Here are some examples:
@@ -83,7 +83,7 @@ print("not x:", not x)  # Output: False
 
 ```
 
-Basic Operators
+## Basic Operators
 
 Write a program that takes two numbers as input, performs addition, subtraction, multiplication, and division, and prints the results.
 
@@ -106,7 +106,7 @@ print("Division:", division)
 
 ```
 
-Working with Input and Output
+## Working with Input and Output
 
 In Python, you can use the print function to output information and the input function to get user input. Here is an example:
 
@@ -132,7 +132,7 @@ print("Hello,", user_name)
 
 ```
 
-Comparison and Logical Operators
+## Comparison and Logical Operators
 
 Comparison operators compare two values and return a boolean result.
 Logical operators combine boolean values.
@@ -156,7 +156,7 @@ print("not bool1:", not bool1)
 
 ```
 
-Comparison and Logical Operators
+## Comparison and Logical Operators
 
 Write a program that takes two numbers as input and prints whether the first number is greater than, less than, or equal to the second number.
 Also, print the result of logical operations between two boolean variables.
@@ -179,8 +179,36 @@ print("not bool1:", not bool1)
 
 ```
 
+## Data Structures
 
+Learn about different data structures in Python.
 
+Lists
+Tuples
+Sets
+Dictionaries
+List comprehensions
 
+```python 
 
+# Lists
+fruits = ["apple", "banana", "cherry"]
+print("Fruits:", fruits)
 
+# Tuples
+point = (10, 20)
+print("Point:", point)
+
+# Sets
+unique_numbers = {1, 2, 3, 2, 1}
+print("Unique Numbers:", unique_numbers)
+
+# Dictionaries
+student = {"name": "Alice", "age": 25, "is_student": True}
+print("Student:", student)
+
+# List Comprehensions
+squares = [x**2 for x in range(10)]
+print("Squares:", squares)
+
+```
