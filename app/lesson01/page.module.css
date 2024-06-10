@@ -1,0 +1,31 @@
+.lessonArea {
+    text-align: center;
+    min-height: 100vh;
+    padding: 1em 15em;
+    background-color: white;
+    color: black;
+}
+
+.headerGap {
+    margin: 2em auto;
+    border-bottom: 3px solid black;
+    width: 100%;
+    display: block;
+}
+
+.header {
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 1em 0 2em 0;
+    font-size: 3em;
+}
+
+.header P {
+    font-size: 1.4em;
+}
+
+.codeChunk {
+    border-radius: 25px;
+}

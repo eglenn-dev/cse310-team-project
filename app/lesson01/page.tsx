@@ -6,6 +6,7 @@ import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-javascript.js";
 import "prismjs/components/prism-python.js";
 import "prismjs/components/prism-jsx.js";
+import styles from "./page.module.css";
 
 export default function Lesson01() {
     useEffect(() => {
@@ -13,21 +14,23 @@ export default function Lesson01() {
     }, []);
 
     return (
-        <div>
-            <div>
-                <h1>Welcome to the Python Basics Interactive Tutorial</h1>
+        <div className={styles.lessonArea}>
+            <div className={styles.header}>
+                <h1>Python Basics Interactive Tutorial</h1>
                 <p>
                     Today we will learn about basic syntax, data types, and
                     basic operations in Python. Let's get started!
                 </p>
             </div>
+            <span className={styles.headerGap}></span>
             <div>
+                <h2>What is a variable?</h2>
                 <p>
                     In Python, a variable is used to store information.
                     Variables can store different types of data. Here are some
                     examples:
                 </p>
-                <pre className="language-python">
+                <pre className={`language-python ${styles.codeChunk}`}>
                     <code className="language-python">
                         {`
                         # Integer
