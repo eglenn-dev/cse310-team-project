@@ -16,13 +16,8 @@ export default function NavBar() {
                 <Link className={styles.navLink} href="/">
                     Home
                 </Link>
-<<<<<<< HEAD
                 <Link className={styles.navLink} href="/lesson01">
                     Lesson 1
-=======
-                <Link className={styles.navLink} href="/lesson">
-                    Lessons
->>>>>>> roy
                 </Link>
                 <Link className={styles.navLink} href="/about">
                     About Us
