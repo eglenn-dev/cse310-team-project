@@ -1,10 +1,27 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: #333333;
+  color: white;
+}
+
+.welcomeMessage {
+  text-align: center;
+  max-width: 600px;
+}
+
+.welcomeMessage h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.welcomeMessage p {
+  font-size: 1.25rem;
+  line-height: 1.15;
 }
 
 .fhead {

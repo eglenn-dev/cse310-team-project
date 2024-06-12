@@ -1,4 +1,4 @@
-## Welcome to the Python Basics Interactive Tutorial! 
+## Welcome to the Python Basics Interactive Tutorial!
 
 Today we will learn about basic syntax, data types, and basic operations in Python.  
 Let's get started!
@@ -189,7 +189,7 @@ Sets
 Dictionaries
 List comprehensions
 
-```python 
+```python
 
 # Lists
 fruits = ["apple", "banana", "cherry"]
