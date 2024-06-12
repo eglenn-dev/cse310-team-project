@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Lesson from "../components/Lesson";
+import styles from "./page.module.css";
 
 export default function Lesson01() {
     const [lessonData, setLessonData] = useState({} as any);
@@ -29,7 +30,11 @@ export default function Lesson01() {
                     backgroundColor: "white",
                 }}
             >
-                Loading...
+                <div className={styles.loader}>
+                    <div data-glitch="Loading..." className={styles.glitch}>
+                        Loading...
+                    </div>
+                </div>
             </div>
         );
     }
