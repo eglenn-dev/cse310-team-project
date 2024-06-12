@@ -12,19 +12,40 @@
   margin-bottom: 1rem;
 }
 
-.synopsis_head {
+.synop_head {
   display: flex;
   font-family: 'Lato', sans-serif;
   margin-bottom: 3rem;
   font-size: 35px;
 }
 
-.synopsis_body {
+.synop_body {
   display: flex;
   margin-top: 4rem;
   text-align: center;
   font-size: 24px;
   margin-right: 3rem;
+}
+
+.synop_ex {
+  display: flex;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+  margin-left: 29rem;
+}
+
+.synop_list {
+  display: flex;
+  margin: 3rem;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.synop_end {
+  display: flex;
+  text-align: center;
+  margin-left: 120rem;
 }
 
 /* Text animation content */

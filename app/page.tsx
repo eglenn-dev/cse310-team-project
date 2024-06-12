@@ -47,9 +47,14 @@ export default function Home() {
                 />
             </div>
             <div>
-                <h1 className={styles.synopsis_head}>Your go-to platform for mastering one of the world's most versatile and in-demand programming languages.</h1>
-                <p className={styles.synopsis_body}>Whether you're a beginner taking your first steps in coding or an experienced developer looking to sharpen your skills, PyCode has something for everyone.</p>
-                
+                <h1 className={styles.synop_head}>Your go-to platform for mastering one of the world's most versatile and in-demand programming languages.</h1>
+                <p className={styles.synop_body}>Whether you're a beginner taking your first steps in coding or an experienced developer looking to sharpen your skills, PyCode has something for everyone.</p>
+                <h1 className={styles.synop_ex}>Why Choose PyCode?</h1>
+                <div className={styles.synop_list}>
+                    <li>Comprehensive Tutorials: Dive into our extensive library of tutorials, ranging from basic syntax and data structures to advanced topics like machine learning, data analysis, and web development. Each tutorial is designed to be clear, concise, and easy to follow.</li>
+                    <li>Interactive Coding Exercises: Put theory into practice with our interactive coding exercises. Get instant feedback and see your progress in real-time as you solve problems and build projects.</li>
+                    <li>Projects and Challenges: Apply your skills to real-world projects and coding challenges. Build everything from simple scripts to complex applications, and showcase your work in your portfolio.</li>
+                </div>
             </div>
         </main>
     );
