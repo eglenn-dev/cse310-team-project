@@ -5,7 +5,6 @@ import Card from "./components/card";
 export default function Home() {
     return (
         <main className={styles.main}>
-            <h1 className={styles.fhead}>Welcome to PyCode!</h1>
             <div className={styles.content}>
                 <div className={styles.content__container}>
                     <p className={styles.content__container__text}>
