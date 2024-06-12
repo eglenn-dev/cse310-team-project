@@ -7,6 +7,17 @@
     height: 10vh;
 }
 
+.pageTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pageTitle div {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
 .navImage {
     margin: 1.5em 2em;
 }

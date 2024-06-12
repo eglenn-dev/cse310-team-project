@@ -3,13 +3,13 @@
         {
             "lesson": 1,
             "objectCount": 1,
-            "title": "Python Basics Interactive Tutorial",
+            "title": "Lesson 1 - The Basics of Python",
             "description": "Today we will learn about basic syntax, data types, and basic operations in Python. Let's get started!",
             "checkpoints": [
                 {
                     "title": "What is a variable?",
                     "description": "A variable is a container for a value. It can be used to store data that can be referenced and manipulated in a program.",
-                    "codeExample": "# Integer\nage = 25\nprint('Age:', age)\n# Float\nprice = 19.99\nprint('Price:', price)\n# String\nname = 'Alice'\nprint('Name:', name)\n# Boolean\nis_student = True\nprint('Is student:', is_student)",
+                    "codeExample": "# Integer\nage = 25\nprint('Age:', age)\n\n# Float\nprice = 19.99\nprint('Price:', price)\n\n# String\nname = 'Alice'\nprint('Name:', name)\n\n# Boolean\nis_student = True\nprint('Is student:', is_student)",
                     "goal": "Complete the following code example by filling it with your own information.",
                     "exercise": "name = 'Your Name'\nage = 1\nis_student = False\n\nprint('Name:', name)\nprint('Age:', age)\nprint('Is student:', is_student)"
                 },
