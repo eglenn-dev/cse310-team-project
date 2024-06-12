@@ -1,0 +1,26 @@
+{
+    "lessons": [
+        {
+            "lesson": 1,
+            "objectCount": 1,
+            "title": "Python Basics Interactive Tutorial",
+            "description": "Today we will learn about basic syntax, data types, and basic operations in Python. Let's get started!",
+            "checkpoints": [
+                {
+                    "title": "What is a variable?",
+                    "description": "A variable is a container for a value. It can be used to store data that can be referenced and manipulated in a program.",
+                    "codeExample": "# Integer\nage = 25\nprint('Age:', age)\n# Float\nprice = 19.99\nprint('Price:', price)\n# String\nname = 'Alice'\nprint('Name:', name)\n# Boolean\nis_student = True\nprint('Is student:', is_student)",
+                    "goal": "Complete the following code example by filling it with your own information.",
+                    "exercise": "name = 'Your Name'\nage = 1\nis_student = False\n\nprint('Name:', name)\nprint('Age:', age)\nprint('Is student:', is_student)"
+                },
+                {
+                    "title": "Understanding Basic Operations",
+                    "description": "In Python, you can perform basic operations on variables such as addition, subtraction, multiplication, and division.",
+                    "codeExample": "a = 10\nb = 3\n\n# Arithmetic operators\naddition = a + b\nprint(\"Addition:\", addition)  # Output: 13\nsubtraction = a - b\nprint(\"Subtraction:\", subtraction)  # Output: 7\nmultiplication = a * b\nprint(\"Multiplication:\", multiplication)  # Output: 30\ndivision = a / b\nprint(\"Division:\", division)  # Output: 3.333...\nmodulus = a % b\nprint(\"Modulus:\", modulus)  # Output: 1\n\n# Comparison operators\nprint(\"a equals b:\", a == b)  # Output: False\nprint(\"a not equals b:\", a != b)  # Output: True\nprint(\"a greater than b:\", a > b)  # Output: True\nprint(\"a less than b:\", a < b)  # Output: False\nprint(\"a greater than or equals b:\", a >= b)  # Output: True\nprint(\"a less than or equals b:\", a <= b)  # Output: False\n\n# Logical operators\nx = True\ny = False\nprint(\"x and y:\", x and y)  # Output: False\nprint(\"x or y:\", x or y)  # Output: True\nprint(\"not x:\", not x)  # Output: False",
+                    "goal": "Write a program that takes two numbers as input, performs addition, subtraction, multiplication, and division, and prints the results.",
+                    "exercise": "a = None  # first number input\nb = None  # second number input\n\naddition = None  # sum of a and b\nprint(\"Addition:\", addition)\n\nsubtraction = None  # difference of a and b\nprint(\"Subtraction:\", subtraction)\n\nmultiplication = None  # product of a and b\nprint(\"Multiplication:\", multiplication)\n\ndivision = None  # quotient of a and b\nprint(\"Division:\", division)"
+                }
+            ]
+        }
+    ]
+}
