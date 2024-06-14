@@ -19,8 +19,24 @@ export default function Footer() {
                 <div>
                     <p>Links</p>
                     <ul>
-                        <li>Link 1</li>
-                        <li>Link 2</li>
+                        <Image 
+                            src="/Twitter-X-Icon-Pink.png"
+                            height={200}
+                            width={200}
+                            alt="X Link"
+                        />
+                        <Image
+                            src="/Facebook-Logo-Black.png"
+                            height={200}
+                            width={200}
+                            alt="Facebook Link"
+                        />
+                        <Image
+                            src="/Instagram-Icon-Pink.png"
+                            height={200}
+                            width={200}
+                            alt="Facebook Link"
+                        />
                         <li>Link 3</li>
                         <li>Link 4</li>
                     </ul>
