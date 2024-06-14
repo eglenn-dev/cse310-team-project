@@ -25,6 +25,9 @@ export default function NavBar() {
                 <Link className={styles.navLink} href="/about">
                     About Us
                 </Link>
+                <Link className={styles.navLink} href="/modules">
+                    Modules
+                </Link>
             </div>
         </div>
     );
