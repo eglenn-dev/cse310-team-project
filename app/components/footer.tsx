@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.css";
+import { url } from "inspector";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.image}>
-                    <Image
+                    <Image 
                         src="/footer.png"
                         height={200}
                         width={200}
@@ -19,26 +20,24 @@ export default function Footer() {
                 <div>
                     <p>Links</p>
                     <ul>
-                        <Image 
+                        <Image className={styles.socials}
                             src="/Twitter-X-Icon-Pink.png"
-                            height={200}
-                            width={200}
+                            height={80}
+                            width={80}
                             alt="X Link"
                         />
-                        <Image
-                            src="/Facebook-Logo-Black.png"
-                            height={200}
-                            width={200}
+                        <Image className={styles.socials}
+                            src="/Facebook-Logo-Pink.png"
+                            height={80}
+                            width={80}
                             alt="Facebook Link"
                         />
-                        <Image
+                        <Image className={styles.socials}
                             src="/Instagram-Icon-Pink.png"
-                            height={200}
-                            width={200}
+                            height={80}
+                            width={80}
                             alt="Facebook Link"
                         />
-                        <li>Link 3</li>
-                        <li>Link 4</li>
                     </ul>
                 </div>
             </div>
