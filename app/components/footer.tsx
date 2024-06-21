@@ -47,7 +47,7 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
-            <div className={styles.copyright}>Copyright (c) {currentYear}</div>
+            <div className={styles.copyright}>Copyright (c) PyCode {currentYear}</div>
         </div>
     );
 }

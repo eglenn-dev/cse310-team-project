@@ -37,12 +37,18 @@ export default function Home() {
                     target=""
                 />
             </div>
-            <div>
-                <h1 className={styles.synopsis_head}>
-                    Your go-to platform for mastering one of the world's most
-                    versatile and in-demand programming languages.
+            <div classname={styles.gotoBody}>
+                <h1 className={styles.gotoDiv}>
+                    Your go-to platform
                 </h1>
-                <p className={styles.synopsis_body}>
+                <h1 className={styles.gotoDiv}>
+                    <span>&nbsp;for mastering Python</span>
+                </h1>
+                <div className={styles.synop_body}>
+                    Master one of the world's most
+                    versatile and in-demand programming languages.
+                </div>
+                <p className={styles.synop_body}>
                     Whether you're a beginner taking your first steps in coding
                     or an experienced developer looking to sharpen your skills,
                     PyCode has something for everyone.
