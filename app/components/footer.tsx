@@ -20,24 +20,30 @@ export default function Footer() {
                 <div>
                     <p>Links</p>
                     <ul>
-                        <Image className={styles.socials}
+                        <a href="https://www.X.com">
+                            <Image className={styles.socials}
                             src="/Twitter-X-Icon-Pink.png"
                             height={80}
                             width={80}
                             alt="X Link"
-                        />
-                        <Image className={styles.socials}
-                            src="/Facebook-Logo-Pink.png"
-                            height={80}
-                            width={80}
-                            alt="Facebook Link"
-                        />
-                        <Image className={styles.socials}
-                            src="/Instagram-Icon-Pink.png"
-                            height={80}
-                            width={80}
-                            alt="Facebook Link"
-                        />
+                            />
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <Image className={styles.socials}
+                                src="/Facebook-Logo-Pink.png"
+                                height={80}
+                                width={80}
+                                alt="Facebook Link"
+                            />
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <Image className={styles.socials}
+                                src="/Instagram-Icon-Pink.png"
+                                height={80}
+                                width={80}
+                                alt="Instagram Link"
+                            />
+                        </a>
                     </ul>
                 </div>
             </div>
