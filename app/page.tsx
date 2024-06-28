@@ -43,7 +43,7 @@ export default function Home() {
                     versatile and in-demand programming languages.
                 </h1>
                 <p className={styles.synopsis_body}>
-                    Whether you're a beginner taking your first steps in coding
+                    Whether you're a beginner, taking your first steps in coding
                     or an experienced developer looking to sharpen your skills,
                     PyCode has something for everyone.
                 </p>
