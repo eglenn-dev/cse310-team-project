@@ -37,7 +37,7 @@ export default function Home() {
                     target=""
                 />
             </div>
-            <div classname={styles.gotoBody}>
+            <div>
                 <h1 className={styles.gotoDiv}>
                     Your go-to platform
                 </h1>
@@ -48,11 +48,11 @@ export default function Home() {
                     Master one of the world's most
                     versatile and in-demand programming languages.
                 </div>
-                <p className={styles.synop_body}>
+                <div className={styles.synop_body}>
                     Whether you're a beginner taking your first steps in coding
                     or an experienced developer looking to sharpen your skills,
                     PyCode has something for everyone.
-                </p>
+                </div>
             </div>
         </main>
     );
