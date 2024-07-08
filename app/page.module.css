@@ -24,12 +24,63 @@
   line-height: 1.15;
 }
 
+/* CSS Go-to Platform Text: Start */
+
+.gotoBody {
+  text-align:center;
+  background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color:#555;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:32px;
+  padding-top:40vh;
+  height:100vh;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.gotoDiv {
+  
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.gotoDiv:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+  margin-left: 10em;
+}
+
+.gotoDiv:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+.gotoDiv:last-of-type span {
+  text-align: center;
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+.gotoP {
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}
+/* End of Go-to Platform Text */
+
+
 .fhead {
   display: flex;
   margin-bottom: 1rem;
 }
 
-.synopsis_head {
+.synop_head {
   display: flex;
   font-family: 'Lato', sans-serif;
   margin-bottom: 3rem;
@@ -37,12 +88,32 @@
   text-align: center;
 }
 
-.synopsis_body {
+.synop_body {
   display: flex;
   margin-top: 4rem;
   text-align: center;
   font-size: 24px;
-  margin-right: 3rem;
+}
+
+.synop_ex {
+  display: flex;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+  margin-left: 29rem;
+}
+
+.synop_list {
+  display: flex;
+  margin: 3rem;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.synop_end {
+  display: flex;
+  text-align: center;
+  margin-left: 120rem;
 }
 
 /* Text animation content */
@@ -355,6 +426,29 @@
 
 /* Animation frames for top home page text */
 
+/* Animation for Go-to Platform text */
+@keyframes showup {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+
+@keyframes slidein {
+  0% { margin-left:-800px; }
+  20% { margin-left:-800px; }
+  35% { margin-left:0px; }
+  100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+  0% {opacity:0;width:0px;}
+  20% {opacity:1;width:0px;}
+  30% {width:355px;}
+  80% {opacity:1;}
+  100% {opacity:0;width:355px;}
+}
+
 @-webkit-keyframes opacity {
 
   0%,
@@ -537,4 +631,6 @@
   95.96% {
     transform: translate3d(0, -25%, 0);
   }
+
+  
 }
