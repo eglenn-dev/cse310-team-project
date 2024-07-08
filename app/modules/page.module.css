@@ -3,15 +3,16 @@
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    height: 30px;
+    height: 100px;
     padding: 30px;
-    border: 2px solid #52B1EA;
+    border: 2px solid #0a193d;
     box-sizing: border-box;
     margin: auto;
     border-radius: 10px;
-    margin-top: 25px;
-    background-color: #52B1EA;
-    color: #0a193d;
+    background-color: #0a193d;
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
 }
 
 .dropDown{
@@ -26,9 +27,27 @@
     margin-bottom: 25px;
     background-color: #ECF3FF;
     color: #0a193d;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .main, .page{
     background-color: #334679;
     padding: 10px 0;
+}
+
+.main{
+margin: 25px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.arrow {
+    user-select: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
