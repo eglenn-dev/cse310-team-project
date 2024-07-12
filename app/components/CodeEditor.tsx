@@ -4,11 +4,16 @@ import styles from "./CodeEditor.module.css";
 
 interface CodeEditorProps {
     exampleCode: string;
+    onCodeChange: (newCode: string) => void;
 }
 
-const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode }) => {
+const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, onCodeChange }) => {
     const [code, setCode] = useState(exampleCode);
     const codeEditorRef = useRef<HTMLTextAreaElement>(null);
+
+    useEffect(() => {
+        onCodeChange(code);
+    }, [code, onCodeChange]);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
         if (event.key === "Enter" && !event.shiftKey) {
@@ -24,19 +29,19 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode }) => {
                 .match(/^\s*/)![0].length;
             setCode(
                 code.substring(0, codeEditorRef.current!.selectionStart) +
-                    " ".repeat(indentationLevel) +
-                    code.substring(codeEditorRef.current!.selectionStart)
+                " ".repeat(indentationLevel) +
+                code.substring(codeEditorRef.current!.selectionStart)
             );
         } else if (event.key === "Tab") {
             event.preventDefault();
             setCode(
                 code.substring(0, codeEditorRef.current!.selectionStart) +
-                    "  " +
-                    code.substring(codeEditorRef.current!.selectionEnd)
+                "  " +
+                code.substring(codeEditorRef.current!.selectionEnd)
             );
             codeEditorRef.current!.selectionStart =
                 codeEditorRef.current!.selectionEnd =
-                    codeEditorRef.current!.selectionStart + 2;
+                codeEditorRef.current!.selectionStart + 2;
         }
     };
 

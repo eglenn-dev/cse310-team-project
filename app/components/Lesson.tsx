@@ -3,6 +3,7 @@
 import styles from "./Lesson.module.css";
 import CodeEditor from "./CodeEditor";
 import PythonCodeChunk from "./PythonCodeChunk";
+import React, { useState } from "react";
 
 interface LessonDataProps {
     lessonData: {
@@ -19,6 +20,27 @@ interface LessonDataProps {
 }
 
 const Lesson: React.FC<LessonDataProps> = (lessonData) => {
+
+    const [editorCode, setEditorCode] = useState("");
+    const handleCodeChange = (newCode: string) => {
+        setEditorCode(newCode);
+    };
+
+    const handleCodeSubmission = () => {
+        fetch('/api/ai', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                input_prompt: editorCode,
+            }),
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+    }
+
     return (
         <div className={styles.lessonArea}>
             <div className={styles.header}>
@@ -35,9 +57,9 @@ const Lesson: React.FC<LessonDataProps> = (lessonData) => {
                         <div className={styles.exerciseArea}>
                             <h3>Try your knowledge</h3>
                             <p>{checkpoint.goal}</p>
-                            <CodeEditor exampleCode={checkpoint.exercise} />
+                            <CodeEditor exampleCode={checkpoint.exercise} onCodeChange={handleCodeChange} />
                         </div>
-                        <div className={styles.submissionButton}>
+                        <div className={styles.submissionButton} onClick={handleCodeSubmission}>
                             Check with AI
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
