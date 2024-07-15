@@ -46,6 +46,7 @@
   display:inline-block;
   overflow:hidden;
   white-space:nowrap;
+  margin-top: -5em;
 }
 
 .gotoDiv:first-of-type {    /* For increasing performance 
@@ -91,7 +92,7 @@
 .synop_body {
   display: flex;
   margin-top: 4rem;
-  margin-left: 6rem;
+  margin-left: 11rem;
   text-align: center;
   position: relative;
   font-size: 24px;
@@ -100,7 +101,8 @@
 .synop_body_2 {
   display: flex;
   margin-top: 4rem;
-  text-align: center;
+  margin-left: -2em;
+  padding-right: 25em;
   font-size: 24px;
 }
 
@@ -127,9 +129,21 @@
 
 /* Text animation content */
 
+.gradient {
+  height: 100%;
+  width: 100%;
+  background-color: linear-gradient(to right, rgba(0, 0, 0, 0.431), rgba(0, 255, 183, 0.427));
+  position: relative;
+  margin: -5em;
+  margin-right: 15em;
+  margin-top: -6em;
+  top: 20;
+  left: 0;
+}
+
 .hero {
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/codechild.webp");*/
-  background: url("../public/codechild-transformed.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/codechild-transformed.webp");
+  /*background: url("../public/codechild-transformed.webp");*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -142,6 +156,13 @@
   border:#555;
 }
 
+.heroHead {
+  margin-left: 21.1em;
+  margin-top: -2.5em;
+  border-bottom-style: dashed;
+  border-bottom: white;
+}
+
 .content {
   display: flex;
   position: absolute;
@@ -151,7 +172,7 @@
   height: 50%;
   overflow: hidden;
   margin-bottom: 6rem;
-  margin-top: 20rem;
+  margin-top: 15rem;
   font-family: 'Lato', sans-serif;
   font-size: 35px;
   line-height: 40px;
@@ -159,7 +180,6 @@
 }
 
 .content__container {
-  background: #555;
   background-size: 200%;
   font-weight: 600;
   overflow: hidden;

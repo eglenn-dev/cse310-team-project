@@ -5,9 +5,10 @@ import Card from "./components/card";
 export default function Home() {
     return (
         <main className={styles.main}>
-            <div className={styles.hero}>
-            </div>
-            <h1>Welcome to Pycode</h1>
+            <div className={styles.gradient}>
+                <div className={styles.hero}></div>
+                <h1 className={styles.heroHead}>Welcome to Pycode</h1>
+                </div>
             <div className={styles.content}>
                 <div className={styles.content__container}>
                     <p className={styles.content__container__text}>
