@@ -2,7 +2,6 @@
     "lessons": [
         {
             "lesson": 1,
-            "objectCount": 1,
             "title": "Lesson 1 - The Basics of Python",
             "description": "Today we will learn about basic syntax, data types, and basic operations in Python. Let's get started!",
             "checkpoints": [
@@ -37,7 +36,9 @@
                 {
                     "title": "Data Structures",
                     "description": "Learn about different data structures in Python.",
-                    "codeExample": "# Lists\nfruits = ['apple', 'banana', 'cherry']\nprint('Fruits:', fruits)\n\n# Tuples\npoint = (10, 20)\nprint('Point:', point)\n\n# Sets\nunique_numbers = {1, 2, 3, 2, 1}\nprint('Unique Numbers:', unique_numbers)\n\n# Dictionaries\nstudent = {'name': 'Alice', 'age': 25, 'is_student': True}\nprint('Student:', student)\n\n# List Comprehensions\nsquares = [x**2 for x in range(10)]\nprint('Squares:', squares)"
+                    "codeExample": "# Lists\nfruits = ['apple', 'banana', 'cherry']\nprint('Fruits:', fruits)\n\n# Tuples\npoint = (10, 20)\nprint('Point:', point)\n\n# Sets\nunique_numbers = {1, 2, 3, 2, 1}\nprint('Unique Numbers:', unique_numbers)\n\n# Dictionaries\nstudent = {'name': 'Alice', 'age': 25, 'is_student': True}\nprint('Student:', student)\n\n# List Comprehensions\nsquares = [x**2 for x in range(10)]\nprint('Squares:', squares)",
+                    "goal": "The goal is to print a single line.",
+                    "exercise": "print('')"
                 }
             ]
         },

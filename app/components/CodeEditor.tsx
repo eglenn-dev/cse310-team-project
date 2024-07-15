@@ -4,15 +4,16 @@ import styles from "./CodeEditor.module.css";
 
 interface CodeEditorProps {
     exampleCode: string;
-    onCodeChange: (newCode: string) => void;
+    checkPointGoal: string;
+    onCodeChange: (newCode: string, prompt_goal: string) => void;
 }
 
-const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, onCodeChange }) => {
+const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, checkPointGoal, onCodeChange }) => {
     const [code, setCode] = useState(exampleCode);
     const codeEditorRef = useRef<HTMLTextAreaElement>(null);
 
     useEffect(() => {
-        onCodeChange(code);
+        onCodeChange(code, checkPointGoal);
     }, [code, onCodeChange]);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -45,6 +46,22 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, onCodeChange }) =>
         }
     };
 
+    const handleCodeSubmission = () => {
+        fetch('/api/ai', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                input_prompt: code,
+                prompt_goal: checkPointGoal,
+            }),
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+    }
+
     return (
         <div>
             <p>Use Shift + Enter to create a new line.</p>
@@ -64,6 +81,20 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, onCodeChange }) =>
                     resize: "vertical",
                 }}
             />
+            <div className={styles.submissionButton} onClick={handleCodeSubmission}>
+                Check with AI
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                >
+                    <path
+                        fill="currentColor"
+                        d="M15 5.25A3.25 3.25 0 0 0 18.25 2h1.5A3.25 3.25 0 0 0 23 5.25v1.5A3.25 3.25 0 0 0 19.75 10h-1.5A3.25 3.25 0 0 0 15 6.75zM4 7a2 2 0 0 1 2-2h7V3H6a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4v-5h-2v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"
+                    />
+                </svg>
+            </div>
         </div>
     );
 };
