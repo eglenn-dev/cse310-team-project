@@ -19,6 +19,76 @@
                     "codeExample": "a = 10\nb = 3\n\n# Arithmetic operators\naddition = a + b\nprint(\"Addition:\", addition)  # Output: 13\nsubtraction = a - b\nprint(\"Subtraction:\", subtraction)  # Output: 7\nmultiplication = a * b\nprint(\"Multiplication:\", multiplication)  # Output: 30\ndivision = a / b\nprint(\"Division:\", division)  # Output: 3.333...\nmodulus = a % b\nprint(\"Modulus:\", modulus)  # Output: 1\n\n# Comparison operators\nprint(\"a equals b:\", a == b)  # Output: False\nprint(\"a not equals b:\", a != b)  # Output: True\nprint(\"a greater than b:\", a > b)  # Output: True\nprint(\"a less than b:\", a < b)  # Output: False\nprint(\"a greater than or equals b:\", a >= b)  # Output: True\nprint(\"a less than or equals b:\", a <= b)  # Output: False\n\n# Logical operators\nx = True\ny = False\nprint(\"x and y:\", x and y)  # Output: False\nprint(\"x or y:\", x or y)  # Output: True\nprint(\"not x:\", not x)  # Output: False",
                     "goal": "Write a program that takes two numbers as input, performs addition, subtraction, multiplication, and division, and prints the results.",
                     "exercise": "a = None  # first number input\nb = None  # second number input\n\naddition = None  # sum of a and b\nprint(\"Addition:\", addition)\n\nsubtraction = None  # difference of a and b\nprint(\"Subtraction:\", subtraction)\n\nmultiplication = None  # product of a and b\nprint(\"Multiplication:\", multiplication)\n\ndivision = None  # quotient of a and b\nprint(\"Division:\", division)"
+                },
+                {
+                    "title": "Working with Input and Output",
+                    "description": "In Python, you can use the print function to output information and the input function to get user input.",
+                    "codeExample": "# Output\nprint('Hello, world!')\n\n# Input\nuser_name = input('Enter your name: ')\nprint('Hello,', user_name)",
+                    "goal": "Write a program that asks for your name and then greets you by name.",
+                    "exercise": "user_name = input('Enter your name: ')\nprint('Hello,', user_name)"
+                },
+                {
+                    "title": "Comparison and Logical Operators",
+                    "description": "Comparison operators compare two values and return a boolean result. Logical operators combine boolean values.",
+                    "codeExample": "number1 = 7\nnumber2 = 5\n\nprint('number1 > number2:', number1 > number2)\nprint('number1 < number2:', number1 < number2)\nprint('number1 == number2:', number1 == number2)\n\nbool1 = True\nbool2 = False\n\nprint('bool1 and bool2:', bool1 and bool2)\nprint('bool1 or bool2:', bool1 or bool2)\nprint('not bool1:', not bool1)",
+                    "goal": "Write a program that takes two numbers as input and prints whether the first number is greater than, less than, or equal to the second number. Also, print the result of logical operations between two boolean variables.",
+                    "exercise": "number1 = int(input('Enter the first number: '))\nnumber2 = int(input('Enter the second number: '))\n\nprint('number1 > number2:', number1 > number2)\nprint('number1 < number2:', number1 < number2)\nprint('number1 == number2:', number1 == number2)\n\nbool1 = True\nbool2 = False\n\nprint('bool1 and bool2:', bool1 and bool2)\nprint('bool1 or bool2:', bool1 or bool2)\nprint('not bool1:', not bool1)"
+                },
+                {
+                    "title": "Data Structures",
+                    "description": "Learn about different data structures in Python.",
+                    "codeExample": "# Lists\nfruits = ['apple', 'banana', 'cherry']\nprint('Fruits:', fruits)\n\n# Tuples\npoint = (10, 20)\nprint('Point:', point)\n\n# Sets\nunique_numbers = {1, 2, 3, 2, 1}\nprint('Unique Numbers:', unique_numbers)\n\n# Dictionaries\nstudent = {'name': 'Alice', 'age': 25, 'is_student': True}\nprint('Student:', student)\n\n# List Comprehensions\nsquares = [x**2 for x in range(10)]\nprint('Squares:', squares)"
+                }
+            ]
+        },
+        {
+            "lesson": 2,
+            "objectCount": 1,
+            "title": "Lesson 2 - Intermediate Python Programming",
+            "description": "Deepen understanding of functions, modular programming, file handling, error handling, and object-oriented programming.",
+            "checkpoints": [
+                {
+                    "title": "Functions and Modules",
+                    "description": "Deepen understanding of functions and modular programming.",
+                    "codeExample": "# Advanced Functions\ndef greet(name=\"Guest\"):\n    return \"Hello, \" + name\n\nprint(greet())\nprint(greet(\"Alice\"))\n\ndef add_numbers(*args):\n    return sum(args)\n\nprint(add_numbers(1, 2, 3, 4))\n\ndef display_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f\"{key}: {value}\")\n\ndisplay_info(name=\"Alice\", age=25)\n\n# Lambda Functions\nadd = lambda x, y: x + y\nprint(add(2, 3))\n\n# Modules and Packages\n# Creating a module (save this as mymodule.py)\ndef greet(name):\n    return \"Hello, \" + name\n\n# Importing a module\n# import mymodule\n# print(mymodule.greet(\"Alice\"))"
+                },
+                {
+                    "title": "File Handling",
+                    "description": "Learn how to handle files in Python.",
+                    "codeExample": "# Reading and Writing Files\n# Writing to a file\nwith open(\"example.txt\", \"w\") as file:\n    file.write(\"Hello, world!\")\n\n# Reading from a file\nwith open(\"example.txt\", \"r\") as file:\n    content = file.read()\n    print(content)\n\n# Working with File Paths\nimport os\n\nprint(os.path.exists(\"example.txt\"))\n\n# Using Context Managers\nwith open(\"example.txt\", \"r\") as file:\n    for line in file:\n        print(line.strip())"
+                },
+                {
+                    "title": "Error and Exception Handling",
+                    "description": "Understand how to handle errors and exceptions.",
+                    "codeExample": "# Try, Except Blocks\ntry:\n    result = 10 / 0\nexcept ZeroDivisionError as e:\n    print(\"Error:\", e)\n\n# Finally Clause\ntry:\n    file = open(\"example.txt\", \"r\")\nfinally:\n    file.close()\n\n# Custom Exceptions\nclass CustomError(Exception):\n    pass\n\ntry:\n    raise CustomError(\"This is a custom error.\")\nexcept CustomError as e:\n    print(\"Caught custom error:\", e)"
+                },
+                {
+                    "title": "Object-Oriented Programming",
+                    "description": "Introduction to OOP concepts.",
+                    "codeExample": "# Classes and Objects\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def greet(self):\n        return f\"Hello, my name is {self.name}.\"\n\nperson = Person(\"Alice\", 25)\nprint(person.greet())\n\n# Inheritance\nclass Student(Person):\n    def __init__(self, name, age, student_id):\n        super().__init__(name, age)\n        self.student_id = student_id\n\nstudent = Student(\"Bob\", 22, \"S12345\")\nprint(student.greet())\n\n# Polymorphism\ndef introduce(person):\n    print(person.greet())\n\nintroduce(person)\nintroduce(student)\n\n# Encapsulation\nclass EncapsulatedPerson:\n    def __init__(self, name, age):\n        self.__name = name\n        self.__age = age\n\n    def get_name(self):\n        return self.__name\n\n    def get_age(self):\n        return self.__age\n\nenc_person = EncapsulatedPerson(\"Charlie\", 30)\nprint(enc_person.get_name())\nprint(enc_person.get_age())"
+                }
+            ]
+        },
+        {
+            "lesson": 3,
+            "objectCount": 1,
+            "title": "Lesson 3 - Advanced Python Programming",
+            "description": "Learn advanced data structures, working with libraries, and working with APIs.",
+            "checkpoints": [
+                {
+                    "title": "Advanced Data Structures",
+                    "description": "Learn advanced data structures and algorithms.",
+                    "codeExample": "# Stacks\nstack = []\nstack.append(1)\nstack.append(2)\nstack.append(3)\nprint(stack.pop())  # Output: 3\n\n# Queues\nfrom collections import deque\nqueue = deque([1, 2, 3])\nqueue.append(4)\nprint(queue.popleft())  # Output: 1\n\n# Linked Lists\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def append(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n        else:\n            current = self.head\n            while current.next:\n                current = current.next\n            current.next = new_node\n\nll = LinkedList()\nll.append(1)\nll.append(2)\nll.append(3)\n\n# Trees\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\n# Graphs\nclass Graph:\n    def __init__(self):\n        self.adj_list = {}\n\n    def add_edge(self, node1, node2):\n        if node1 not in self.adj_list:\n            self.adj_list[node1] = []\n        self.adj_list[node1].append(node2)"
+                },
+                {
+                    "title": "Working with Libraries",
+                    "description": "Get comfortable with popular Python libraries.",
+                    "codeExample": "# NumPy\nimport numpy as np\narray = np.array([1, 2, 3])\nprint('NumPy Array:', array)\n\n# Pandas\nimport pandas as pd\ndata = {'Name': ['Alice', 'Bob'], 'Age': [25, 22]}\ndf = pd.DataFrame(data)\nprint('Pandas DataFrame:')\nprint(df)\n\n# Matplotlib/Seaborn\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nx = [1, 2, 3, 4, 5]\ny = [10, 20, 25, 30, 40]\n\nplt.plot(x, y)\nplt.title('Line Chart')\nplt.xlabel('X-axis')\nplt.ylabel('Y-axis')\nplt.show()\n\nsns.barplot(x=['A', 'B', 'C'], y=[1, 3, 2])\nplt.show()\n\n# Requests\nimport requests\nresponse = requests.get('https://api.github.com')\nprint('Requests Response:', response.json())"
+                },
+                {
+                    "title": "Working with APIs",
+                    "description": "Learn how to interact with APIs.",
+                    "codeExample": "# Understanding APIs\n# APIs allow different software systems to communicate with each other.\n\n# Making GET Requests\nresponse = requests.get('https://api.github.com')\nprint(response.json())\n\n# Making POST Requests\npayload = {'key': 'value'}\nresponse = requests.post('https://httpbin.org/post', data=payload)\nprint(response.json())\n\n# Handling JSON Data\ndata = response.json()\nprint(data)\n\n# Authenticating API Requests\nresponse = requests.get('https://api.github.com/user', auth=('username', 'token'))\nprint(response.json())"
                 }
             ]
         }
