@@ -2,20 +2,38 @@
 import styles from "./page.module.css";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
+interface Lesson {
+    lesson: number;
+    title: string;
+    description: string;
+    checkpoints: Checkpoint[];
+}
 
-export default function ModuleCard() {
+interface Checkpoint {
+    title: string;
+    description: string;
+    codeExample: string;
+    goal: string;
+    exercise: string;
+}
 
+interface ModuleCardProps {
+    lessonData: Lesson;
+}
+
+const ModuleCard: React.FC<ModuleCardProps> = ({ lessonData }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <div className={styles.main}>
-            <div onClick={(e) => {setMenuOpen(!menuOpen)}} className={styles.mainBar}>
+            <div onClick={(e) => { setMenuOpen(!menuOpen) }} className={styles.mainBar}>
                 <div className={styles.moduleName}>
-                    *Module Name*
+                    {lessonData.title}
                 </div>
                 <div className={styles.status}>
-                    <Image 
+                    <Image
                         className={`${styles.arrow} ${menuOpen ? (styles.nothing) : styles.rotate}`}
                         src="/arrow.svg"
                         height={35}
@@ -26,20 +44,13 @@ export default function ModuleCard() {
             </div>
             <div className={menuOpen ? (styles.dropDown) : (styles.hidden)}>
                 <ul>
-                    <li>
-                        *link1 lesson*
-                    </li>
-                    <li>
-                        *link2 Checkpoint 1*
-                    </li>
-                    <li>
-                        *link2 Checkpoint 2*
-                    </li>
-                    <li>
-                        *link3 Checkpoint 3*
-                    </li>
+                    {lessonData.checkpoints.map((checkpoint: Checkpoint) => {
+                        return <li><Link href={`/lesson0${lessonData.lesson}`}>{checkpoint.title}</Link></li>;
+                    })}
                 </ul>
             </div>
         </div>
     );
 }
+
+export default ModuleCard;
