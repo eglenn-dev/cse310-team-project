@@ -11,20 +11,15 @@ import "prismjs/components/prism-jsx.js";
 interface CodeEditorProps {
     exampleCode: string;
     checkPointGoal: string;
-    onCodeChange: (newCode: string, prompt_goal: string) => void;
 }
 
-const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, checkPointGoal, onCodeChange }) => {
+const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, checkPointGoal }) => {
     const originalCode = exampleCode;
 
     const [code, setCode] = useState(exampleCode);
     const codeEditorRef = useRef<HTMLTextAreaElement>(null);
     const [aiResponse, setAiResponse] = useState("");
     const [showPopup, setShowPopup] = useState(false);
-
-    useEffect(() => {
-        onCodeChange(code, checkPointGoal);
-    }, [code, onCodeChange]);
 
     useEffect(() => {
         Prism.highlightAll();

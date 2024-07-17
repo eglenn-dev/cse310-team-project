@@ -21,14 +21,6 @@ interface LessonDataProps {
 }
 
 const Lesson: React.FC<LessonDataProps> = (lessonData) => {
-
-    const [editorCode, setEditorCode] = useState("");
-    const [promptGoal, setGoal] = useState("");
-    const handleCodeChange = (newCode: string, prompt_goal: string) => {
-        setEditorCode(newCode);
-        setGoal(prompt_goal);
-    };
-
     return (
         <div className={styles.lessonArea}>
             <div className={styles.header}>
@@ -45,7 +37,7 @@ const Lesson: React.FC<LessonDataProps> = (lessonData) => {
                         <div className={styles.exerciseArea}>
                             <h3>Try your knowledge</h3>
                             <p>{checkpoint.goal}</p>
-                            <CodeEditor exampleCode={checkpoint.exercise} checkPointGoal={checkpoint.goal} onCodeChange={handleCodeChange} />
+                            <CodeEditor exampleCode={checkpoint.exercise} checkPointGoal={checkpoint.goal} />
                         </div>
                     </div>
                 )

@@ -1,14 +1,12 @@
 "use client";
 import styles from "./page.module.css";
-import Card from "./components/card";
 
 export default function Home() {
     return (
         <main className={styles.main}>
             <div className={styles.gradient}>
-                <div className={styles.hero}></div>
-                <h1 className={styles.heroHead}>Welcome to Pycode</h1>
-                </div>
+                <div className={styles.hero}>PyCode Educator</div>
+            </div>
             <div className={styles.content}>
                 <div className={styles.content__container}>
                     <p className={styles.content__container__text}>
@@ -32,32 +30,31 @@ export default function Home() {
                 </div>
             </div>
             <div className={styles.lessonArea}>
-                <Card
-                    title="L1: Variables"
-                    description="Learn how to declare and use variables in Python."
-                    iconPath="/container.svg"
-                    href="/lesson01"
-                    outbound={false}
-                    target=""
-                />
+                <h2 data-aos="fade-up">What is PyCode?</h2>
+                <p data-aos="fade-up">PyCode is an education tool for students and teachers to teach students about what Python is and how it can be useful. We uses that latest Generative Artificial Intelligence to help students learn.</p>
             </div>
-            <div>
+            <div className={styles.fluff}>
                 <h1 className={styles.gotoDiv}>
                     Your go-to platform
                 </h1>
                 <h1 className={styles.gotoDiv}>
                     <span>&nbsp;for mastering Python</span>
                 </h1>
-                <div className={styles.synop_body}>
-                            Master one of the world's most
+            </div>
+            <div className={styles.lessonArea}>
+                <p data-aos="fade-up">
+                    Master one of the world's most
                     versatile and in-demand programming languages.
-                </div>
-                <div className={styles.synop_body_2}>
+                </p>
+                <p data-aos="fade-up">
                     Whether you're a beginner taking your first steps in coding
                     or an experienced developer looking to sharpen your skills,
                     PyCode has something for everyone.
-                </div>
+                </p>
             </div>
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>AOS.init();</script>
         </main>
     );
 }
