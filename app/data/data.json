@@ -9,36 +9,36 @@
                     "title": "What is a variable?",
                     "description": "A variable is a container for a value. It can be used to store data that can be referenced and manipulated in a program.",
                     "codeExample": "# Integer\nage = 25\nprint('Age:', age)\n\n# Float\nprice = 19.99\nprint('Price:', price)\n\n# String\nname = 'Alice'\nprint('Name:', name)\n\n# Boolean\nis_student = True\nprint('Is student:', is_student)",
-                    "goal": "Complete the following code example by filling it with your own information.",
-                    "exercise": "name = 'Your Name'\nage = 1\nis_student = False\n\nprint('Name:', name)\nprint('Age:', age)\nprint('Is student:', is_student)"
+                    "goal": "Complete the following code example by assigning your name, age, and a boolean value to the variables.",
+                    "exercise": "name = # TODO add name\nage = # TODO change age\nis_student = # TODO add student status\n\nprint('Name:', name)\nprint('Age:', age)\nprint('Is student:', is_student)"
                 },
                 {
                     "title": "Understanding Basic Operations",
                     "description": "In Python, you can perform basic operations on variables such as addition, subtraction, multiplication, and division.",
                     "codeExample": "a = 10\nb = 3\n\n# Arithmetic operators\naddition = a + b\nprint(\"Addition:\", addition)  # Output: 13\nsubtraction = a - b\nprint(\"Subtraction:\", subtraction)  # Output: 7\nmultiplication = a * b\nprint(\"Multiplication:\", multiplication)  # Output: 30\ndivision = a / b\nprint(\"Division:\", division)  # Output: 3.333...\nmodulus = a % b\nprint(\"Modulus:\", modulus)  # Output: 1\n\n# Comparison operators\nprint(\"a equals b:\", a == b)  # Output: False\nprint(\"a not equals b:\", a != b)  # Output: True\nprint(\"a greater than b:\", a > b)  # Output: True\nprint(\"a less than b:\", a < b)  # Output: False\nprint(\"a greater than or equals b:\", a >= b)  # Output: True\nprint(\"a less than or equals b:\", a <= b)  # Output: False\n\n# Logical operators\nx = True\ny = False\nprint(\"x and y:\", x and y)  # Output: False\nprint(\"x or y:\", x or y)  # Output: True\nprint(\"not x:\", not x)  # Output: False",
                     "goal": "Write a program that takes two numbers as input, performs addition, subtraction, multiplication, and division, and prints the results.",
-                    "exercise": "a = None  # first number input\nb = None  # second number input\n\naddition = None  # sum of a and b\nprint(\"Addition:\", addition)\n\nsubtraction = None  # difference of a and b\nprint(\"Subtraction:\", subtraction)\n\nmultiplication = None  # product of a and b\nprint(\"Multiplication:\", multiplication)\n\ndivision = None  # quotient of a and b\nprint(\"Division:\", division)"
+                    "exercise": "# Get the first number from the user\nnum1 = float(input('Enter the first number: '))\n\n# Get the second number from the user\nnum2 = float(input('Enter the second number: '))\n\n# TODO: Calculate the sum of the two numbers\n\n# TODO: Calculate the difference between the two numbers\n\n# TODO: Calculate the product of the two numbers\n\n# TODO: Calculate the quotient of the two numbers\n\n# Print the results\nprint('Sum:',      ) # Print the sum\nprint('Difference:', ) # Print the difference\nprint('Product:',   ) # Print the product\nprint('Quotient:',  ) # Print the quotient"
                 },
                 {
                     "title": "Working with Input and Output",
                     "description": "In Python, you can use the print function to output information and the input function to get user input.",
                     "codeExample": "# Output\nprint('Hello, world!')\n\n# Input\nuser_name = input('Enter your name: ')\nprint('Hello,', user_name)",
                     "goal": "Write a program that asks for your name and then greets you by name.",
-                    "exercise": "user_name = input('Enter your name: ')\nprint('Hello,', user_name)"
+                    "exercise": "# Get user's name\nname =  # YOUR CODE HERE\n\n# Greet the user\nprint(f'Hello, {  }!') # YOUR CODE HERE"
                 },
                 {
                     "title": "Comparison and Logical Operators",
                     "description": "Comparison operators compare two values and return a boolean result. Logical operators combine boolean values.",
                     "codeExample": "number1 = 7\nnumber2 = 5\n\nprint('number1 > number2:', number1 > number2)\nprint('number1 < number2:', number1 < number2)\nprint('number1 == number2:', number1 == number2)\n\nbool1 = True\nbool2 = False\n\nprint('bool1 and bool2:', bool1 and bool2)\nprint('bool1 or bool2:', bool1 or bool2)\nprint('not bool1:', not bool1)",
                     "goal": "Write a program that takes two numbers as input and prints whether the first number is greater than, less than, or equal to the second number. Also, print the result of logical operations between two boolean variables.",
-                    "exercise": "number1 = int(input('Enter the first number: '))\nnumber2 = int(input('Enter the second number: '))\n\nprint('number1 > number2:', number1 > number2)\nprint('number1 < number2:', number1 < number2)\nprint('number1 == number2:', number1 == number2)\n\nbool1 = True\nbool2 = False\n\nprint('bool1 and bool2:', bool1 and bool2)\nprint('bool1 or bool2:', bool1 or bool2)\nprint('not bool1:', not bool1)"
+                    "exercise": "# Get two numbers from the user\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\n\n# Compare the numbers and print the result\n# TODO check if num1 is greater than num2\n# TODO check if num2 is greater than num1\n# TODO check if num1 and num2 are equal\n\n# Logical operations on boolean variables\nbool1 = True\nbool2 = False\n\n# Print the results of logical operations\nprint(f\"{bool1} AND {bool2} is\", )  # complete logical AND\nprint(f\"{bool1} OR {bool2} is\", )   # complete logical OR\nprint(f\"NOT {bool1} is\", ) # complete logical NOT"
                 },
                 {
                     "title": "Data Structures",
                     "description": "Learn about different data structures in Python.",
                     "codeExample": "# Lists\nfruits = ['apple', 'banana', 'cherry']\nprint('Fruits:', fruits)\n\n# Tuples\npoint = (10, 20)\nprint('Point:', point)\n\n# Sets\nunique_numbers = {1, 2, 3, 2, 1}\nprint('Unique Numbers:', unique_numbers)\n\n# Dictionaries\nstudent = {'name': 'Alice', 'age': 25, 'is_student': True}\nprint('Student:', student)\n\n# List Comprehensions\nsquares = [x**2 for x in range(10)]\nprint('Squares:', squares)",
-                    "goal": "The goal is to print a single line.",
-                    "exercise": "print('')"
+                    "goal": "Create a dictionary of a shopping list with items, and quantity needed. Then, print the shopping list.",
+                    "exercise": "# TODO - Create a dictionary of a shopping list with items and quantity needed.\n\n# TODO - Your code here. Print the shopping list."
                 }
             ]
         },
