@@ -1,11 +1,21 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function About() {
     const name = "Brandon";
 
     return (
       <div className={styles.main}>
+        <div className={styles.heroimg}>
+          <Image
+            src="/hero-img-about-us.jpg"
+            width={50}
+            height={50}
+            alt="hero img"
+            layout="responsive"
+          />
+        </div>
         <h1>About Us</h1>
         <h2>Inspiring Future Programmers, One Line of Code at a Time</h2>
         <p>We are a dedicated team of Brigham Young University-Idaho (BYU-I) students from the Applied Programming 310 class. Our project aims to provide a comprehensive and engaging platform to teach Python programming to middle school and high school students. By leveraging our skills and passion for education, we hope to inspire the next generation of programmers and make learning Python both fun and accessible.</p>
@@ -16,10 +26,10 @@ export default function About() {
         <span></span>
         <h1>Why Choose Us?</h1>
         <ul>
-          <li>Interactive Lessons: Engaging and hands-on lessons to keep students motivated.</li>
-          <li>Practical Exercises: Real-world examples to apply what you've learned.</li>
-          <li>Tailored Content: Lessons designed to meet various skill levels.</li>
-          <li>Supportive Community: Join a community of learners and educators.</li>
+          <li className={styles.listbox}>Interactive Lessons: Engaging and hands-on lessons to keep students motivated.</li>
+          <li className={styles.listbox}>Practical Exercises: Real-world examples to apply what you've learned.</li>
+          <li className={styles.listbox}>Tailored Content: Lessons designed to meet various skill levels.</li>
+          <li className={styles.listbox}>Supportive Community: Join a community of learners and educators.</li>
         </ul>
         <span></span>
         <h1>Our Journey</h1>
