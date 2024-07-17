@@ -1,16 +1,16 @@
-.main{
+.main {
   height: 100%;
   background-color: #334679;
 }
 
-.main h1{
+.main h1 {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
   font-size: 50px;
 }
 
-.main p{
+.main p {
   text-align: center;
   margin-left: 400px;
   margin-right: 400px;
@@ -24,28 +24,65 @@
   padding-bottom: 50px;
   font-size: 25px;
 }
-.line{
+
+.line {
   margin: 2em auto;
   border-bottom: 3px solid black;
   width: 100%;
   display: block;
 }
 
-.main h2{
+.choiceArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding: 4em;
+}
+
+.choiceImage {
+  padding: 1em;
+  border: none;
+  border-radius: 60px;
+}
+
+.choiceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.main h2 {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 30px;
 }
 
-.main line{
+.main line {
   background-color: #334679;
 }
 
-.listbox{
-  border: 1px solid #ccc;
-  padding: 10px;
+.listbox {
+  padding: 1em;
   margin: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 5px 8px rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 500;
+  background: linear-gradient(90deg, #7eaaff 0%, #ff48fb 100%, rgba(0, 0, 0, 0.28) 60%);
+}
+
+.peopleGrid {
+  display: grid;
+  padding: 4em;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.peopleGrid p {
+  margin: 0;
 }
