@@ -1,12 +1,13 @@
 "use client";
-
 import styles from "./Lesson.module.css";
 import CodeEditor from "./CodeEditor";
 import PythonCodeChunk from "./PythonCodeChunk";
 import React, { useState } from "react";
+import Link from "next/link";
 
 interface LessonDataProps {
     lessonData: {
+        lesson: number;
         title: string;
         description: string;
         checkpoints: {
@@ -49,6 +50,7 @@ const Lesson: React.FC<LessonDataProps> = (lessonData) => {
                     </div>
                 )
             )}
+            <Link href={`/lesson0${lessonData.lessonData.lesson + 1}#`}>Next Lesson</Link>
         </div>
     );
 };
