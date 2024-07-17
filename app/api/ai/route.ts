@@ -26,11 +26,6 @@ async function aiGeneration(
         const result = await model.generateContent(
             `Code: ${promptInput}\nGoal: ${prompt_goal}. Does the code meet the given goal? If not, give feedback and suggest changes to the given code without asking follow up questions, and without completing it for them. Small and relevant examples are acceptable. Do not change the goal, only the code. If the prompt meets the goal and there is real information present, write "Congrats! You were able to complete the goal.". If the code is completely off-topic, or not even code, write "No, please return to the page and try again." This is what the user was given to start with, it must be different than this: ${original_code}.`
         );
-        console.log(
-            "Result",
-            // @ts-ignore
-            result.response.candidates[0].content.parts[0].text ?? []
-        );
         return result;
     } catch (e) {
         console.error(e);
