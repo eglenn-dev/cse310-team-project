@@ -69,6 +69,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, checkPointGoal }) 
                     fontSize: "16px",
                     border: "1px solid #ccc",
                     resize: "vertical",
+                    color: "white",
                 }}
             />
             <div className={styles.submissionButton} onClick={handleCodeSubmission}>
