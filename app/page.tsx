@@ -24,7 +24,7 @@ export default function Home() {
                             Code !
                         </li>
                         <li className={styles.content__container__list__item}>
-                            cat      Succeed !
+                            Succeed !
                         </li>
                     </ul>
                 </div>
