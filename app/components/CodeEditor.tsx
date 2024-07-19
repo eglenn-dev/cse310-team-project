@@ -25,37 +25,8 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, checkPointGoal }) 
         Prism.highlightAll();
     }, []);
 
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
-        if (event.key === "Enter" && !event.shiftKey) {
-            event.preventDefault();
-            const currentLine = code
-                .substring(0, codeEditorRef.current!.selectionStart)
-                .split("\n").length;
-            setCode(code + "\n");
-            codeEditorRef.current!.selectionStart =
-                codeEditorRef.current!.selectionEnd = code.length + 1;
-            const indentationLevel = code
-                .substring(0, codeEditorRef.current!.selectionStart)
-                .match(/^\s*/)![0].length;
-            setCode(
-                code.substring(0, codeEditorRef.current!.selectionStart) +
-                " ".repeat(indentationLevel) +
-                code.substring(codeEditorRef.current!.selectionStart)
-            );
-        } else if (event.key === "Tab") {
-            event.preventDefault();
-            setCode(
-                code.substring(0, codeEditorRef.current!.selectionStart) +
-                "  " +
-                code.substring(codeEditorRef.current!.selectionEnd)
-            );
-            codeEditorRef.current!.selectionStart =
-                codeEditorRef.current!.selectionEnd =
-                codeEditorRef.current!.selectionStart + 2;
-        }
-    };
-
     const handleCodeSubmission = () => {
+        setAiResponse("");
         const fetchResponse = async () => {
             const response = await fetch('/api/ai', {
                 method: 'POST',
@@ -69,11 +40,11 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, checkPointGoal }) 
                 }),
             });
             const data = await response.json();
-            console.log(data);
             const md = new MarkdownIt();
             setAiResponse(md.render(data.response.candidates[0].content.parts[0].text));
         };
         fetchResponse();
+        setShowPopup(true);
     }
 
     useEffect(() => {
@@ -91,7 +62,6 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ exampleCode, checkPointGoal }) 
                 ref={codeEditorRef}
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                onKeyDown={handleKeyDown}
                 style={{
                     width: "80%",
                     height: "400px",

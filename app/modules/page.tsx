@@ -27,7 +27,7 @@ export default function Modules() {
       const response = await fetch('/api/all-lessons');
       const data = await response.json();
       console.log("API Response", data);
-      setLessons(data.lessons);
+      setLessons(data);
     };
     fetchLessonData();
   }, []);

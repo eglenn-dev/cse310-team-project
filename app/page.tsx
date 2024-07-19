@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <main className={styles.main}>
             <div className={styles.gradient}>
-                <div className={styles.hero}>PyCode Educator</div>
+                <div className={styles.hero}></div>
             </div>
             <div className={styles.content}>
                 <div className={styles.content__container}>
@@ -24,7 +24,7 @@ export default function Home() {
                             Code !
                         </li>
                         <li className={styles.content__container__list__item}>
-                            Succeed !
+                            cat      Succeed !
                         </li>
                     </ul>
                 </div>
