@@ -100,9 +100,9 @@
 
 .synop_body_2 {
   display: flex;
+  text-align: center;
   margin-top: 4rem;
   margin-left: -2em;
-  padding-right: 25em;
   font-size: 24px;
 }
 
