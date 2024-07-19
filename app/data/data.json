@@ -44,52 +44,120 @@
         },
         {
             "lesson": 2,
-            "objectCount": 1,
-            "title": "Lesson 2 - Intermediate Python Programming",
-            "description": "Deepen understanding of functions, modular programming, file handling, error handling, and object-oriented programming.",
+            "title": "Lesson 2 - Control Flow and Functions",
+            "description": "This lesson covers control flow statements like if-else and loops, and introduces functions for code reusability.",
             "checkpoints": [
                 {
-                    "title": "Functions and Modules",
-                    "description": "Deepen understanding of functions and modular programming.",
-                    "codeExample": "# Advanced Functions\ndef greet(name=\"Guest\"):\n    return \"Hello, \" + name\n\nprint(greet())\nprint(greet(\"Alice\"))\n\ndef add_numbers(*args):\n    return sum(args)\n\nprint(add_numbers(1, 2, 3, 4))\n\ndef display_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f\"{key}: {value}\")\n\ndisplay_info(name=\"Alice\", age=25)\n\n# Lambda Functions\nadd = lambda x, y: x + y\nprint(add(2, 3))\n\n# Modules and Packages\n# Creating a module (save this as mymodule.py)\ndef greet(name):\n    return \"Hello, \" + name\n\n# Importing a module\n# import mymodule\n# print(mymodule.greet(\"Alice\"))"
+                    "title": "Conditional Statements",
+                    "description": "Learn how to control the flow of your program based on conditions using if, elif, and else statements.",
+                    "codeExample": "# Check if a number is positive, negative, or zero\nnumber = float(input(\"Enter a number: \"))\n\nif number > 0:\n    print(\"The number is positive.\")\nelif number < 0:\n    print(\"The number is negative.\")\nelse:\n    print(\"The number is zero.\")",
+                    "goal": "Write a program that takes a number as input and checks if it's even or odd.",
+                    "exercise": "# Get a number from the user\nnumber = int(input(\"Enter a number: \"))\n\n# Check if the number is even or odd using the modulo operator (%) \n# TODO - Your code here"
                 },
                 {
-                    "title": "File Handling",
-                    "description": "Learn how to handle files in Python.",
-                    "codeExample": "# Reading and Writing Files\n# Writing to a file\nwith open(\"example.txt\", \"w\") as file:\n    file.write(\"Hello, world!\")\n\n# Reading from a file\nwith open(\"example.txt\", \"r\") as file:\n    content = file.read()\n    print(content)\n\n# Working with File Paths\nimport os\n\nprint(os.path.exists(\"example.txt\"))\n\n# Using Context Managers\nwith open(\"example.txt\", \"r\") as file:\n    for line in file:\n        print(line.strip())"
+                    "title": "Looping Constructs",
+                    "description": "Understand how to repeat code execution using for and while loops.",
+                    "codeExample": "# Print numbers from 1 to 5 using a for loop\nfor i in range(1, 6):\n    print(i)\n\n# Calculate the sum of numbers from 1 to 10 using a while loop\nsum = 0\ncount = 1\nwhile count <= 10:\n    sum += count\n    count += 1\nprint(\"Sum of numbers from 1 to 10:\", sum)",
+                    "goal": "Write a program that prints the multiplication table of a given number using a for loop.",
+                    "exercise": "# Get the number for the multiplication table\nnumber = int(input(\"Enter a number: \"))\n\n# Print the multiplication table using a for loop\n# TODO - Your code here"
                 },
                 {
-                    "title": "Error and Exception Handling",
-                    "description": "Understand how to handle errors and exceptions.",
-                    "codeExample": "# Try, Except Blocks\ntry:\n    result = 10 / 0\nexcept ZeroDivisionError as e:\n    print(\"Error:\", e)\n\n# Finally Clause\ntry:\n    file = open(\"example.txt\", \"r\")\nfinally:\n    file.close()\n\n# Custom Exceptions\nclass CustomError(Exception):\n    pass\n\ntry:\n    raise CustomError(\"This is a custom error.\")\nexcept CustomError as e:\n    print(\"Caught custom error:\", e)"
-                },
-                {
-                    "title": "Object-Oriented Programming",
-                    "description": "Introduction to OOP concepts.",
-                    "codeExample": "# Classes and Objects\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def greet(self):\n        return f\"Hello, my name is {self.name}.\"\n\nperson = Person(\"Alice\", 25)\nprint(person.greet())\n\n# Inheritance\nclass Student(Person):\n    def __init__(self, name, age, student_id):\n        super().__init__(name, age)\n        self.student_id = student_id\n\nstudent = Student(\"Bob\", 22, \"S12345\")\nprint(student.greet())\n\n# Polymorphism\ndef introduce(person):\n    print(person.greet())\n\nintroduce(person)\nintroduce(student)\n\n# Encapsulation\nclass EncapsulatedPerson:\n    def __init__(self, name, age):\n        self.__name = name\n        self.__age = age\n\n    def get_name(self):\n        return self.__name\n\n    def get_age(self):\n        return self.__age\n\nenc_person = EncapsulatedPerson(\"Charlie\", 30)\nprint(enc_person.get_name())\nprint(enc_person.get_age())"
+                    "title": "Introduction to Functions",
+                    "description": "Learn how to define and use functions to organize your code and make it reusable.",
+                    "codeExample": "# Define a function to calculate the factorial of a number\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)\n\n# Get user input\nnum = int(input(\"Enter a non-negative integer: \"))\n\n# Calculate and print the factorial\nif num >= 0:\n    print(\"The factorial of\", num, \"is\", factorial(num))\nelse:\n    print(\"Factorial is not defined for negative numbers.\")",
+                    "goal": "Write a function that takes two numbers as arguments and returns their sum. Call the function with two numbers and print the result.",
+                    "exercise": "# Define the function to calculate the sum of two numbers\n# TODO - Your code here\n\n# Get two numbers from the user\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\n\n# Call the sum function and print the result\n# TODO - Your code here"
                 }
             ]
         },
         {
             "lesson": 3,
-            "objectCount": 1,
-            "title": "Lesson 3 - Advanced Python Programming",
-            "description": "Learn advanced data structures, working with libraries, and working with APIs.",
+            "title": "Lesson 3 - Working with Strings and Files",
+            "description": "This lesson focuses on string manipulation techniques and interacting with files for reading and writing data.",
             "checkpoints": [
                 {
-                    "title": "Advanced Data Structures",
-                    "description": "Learn advanced data structures and algorithms.",
-                    "codeExample": "# Stacks\nstack = []\nstack.append(1)\nstack.append(2)\nstack.append(3)\nprint(stack.pop())  # Output: 3\n\n# Queues\nfrom collections import deque\nqueue = deque([1, 2, 3])\nqueue.append(4)\nprint(queue.popleft())  # Output: 1\n\n# Linked Lists\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def append(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n        else:\n            current = self.head\n            while current.next:\n                current = current.next\n            current.next = new_node\n\nll = LinkedList()\nll.append(1)\nll.append(2)\nll.append(3)\n\n# Trees\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\n# Graphs\nclass Graph:\n    def __init__(self):\n        self.adj_list = {}\n\n    def add_edge(self, node1, node2):\n        if node1 not in self.adj_list:\n            self.adj_list[node1] = []\n        self.adj_list[node1].append(node2)"
+                    "title": "String Manipulation",
+                    "description": "Learn various methods for working with strings, including slicing, concatenation, and formatting.",
+                    "codeExample": "# String slicing\ntext = \"Hello, world!\"\nprint(text[0:5])  # Output: Hello\n\n# String concatenation\ngreeting = \"Hello\"\nname = \"Alice\"\nmessage = greeting + \", \" + name + \"!\"\nprint(message)  # Output: Hello, Alice!\n\n# String formatting\nname = \"Bob\"\nage = 30\nprint(f\"My name is {name} and I am {age} years old.\")",
+                    "goal": "Write a program that takes a string as input, reverses it, and checks if it's a palindrome (reads the same backward).",
+                    "exercise": "# Get a string from the user\ntext = input(\"Enter a string: \")\n\n# Reverse the string\n# TODO - Your code here\n\n# Check if the reversed string is the same as the original string\n# TODO - Your code here"
                 },
                 {
-                    "title": "Working with Libraries",
-                    "description": "Get comfortable with popular Python libraries.",
-                    "codeExample": "# NumPy\nimport numpy as np\narray = np.array([1, 2, 3])\nprint('NumPy Array:', array)\n\n# Pandas\nimport pandas as pd\ndata = {'Name': ['Alice', 'Bob'], 'Age': [25, 22]}\ndf = pd.DataFrame(data)\nprint('Pandas DataFrame:')\nprint(df)\n\n# Matplotlib/Seaborn\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nx = [1, 2, 3, 4, 5]\ny = [10, 20, 25, 30, 40]\n\nplt.plot(x, y)\nplt.title('Line Chart')\nplt.xlabel('X-axis')\nplt.ylabel('Y-axis')\nplt.show()\n\nsns.barplot(x=['A', 'B', 'C'], y=[1, 3, 2])\nplt.show()\n\n# Requests\nimport requests\nresponse = requests.get('https://api.github.com')\nprint('Requests Response:', response.json())"
+                    "title": "File Handling",
+                    "description": "Explore how to open, read from, and write to files.",
+                    "codeExample": "# Writing to a file\nwith open(\"my_file.txt\", \"w\") as file:\n    file.write(\"This is some text to write to the file.\")\n\n# Reading from a file\nwith open(\"my_file.txt\", \"r\") as file:\n    content = file.read()\n    print(content)",
+                    "goal": "Write a program that reads a text file, counts the number of words, and prints the count.",
+                    "exercise": "# Open the file in read mode\n# TODO - Your code here\n\n# Read the content of the file\n# TODO - Your code here\n\n# Count the number of words\n# TODO - Your code here\n\n# Print the word count\n# TODO - Your code here"
+                }
+            ]
+        },
+        {
+            "lesson": 4,
+            "title": "Lesson 4 -  Modules, Error Handling, and List Comprehensions",
+            "description": "This lesson introduces modules for code organization and reusability, error handling to make your programs more robust, and powerful list comprehensions for concise code.",
+            "checkpoints": [
+                {
+                    "title": "Using Modules",
+                    "description": "Learn how to import and use modules from Python's standard library and external packages.",
+                    "codeExample": "# Import the math module\nimport math\n\n# Calculate the square root of a number\nnumber = 25\nsquare_root = math.sqrt(number)\nprint(f\"The square root of {number} is {square_root}\")",
+                    "goal": "Write a program that uses the `random` module to generate a random number between 1 and 100 and asks the user to guess the number. Provide feedback to the user if their guess is too high or too low.",
+                    "exercise": "# TODO: Write a program that generates a random number and allows the user to guess it."
                 },
                 {
-                    "title": "Working with APIs",
-                    "description": "Learn how to interact with APIs.",
-                    "codeExample": "# Understanding APIs\n# APIs allow different software systems to communicate with each other.\n\n# Making GET Requests\nresponse = requests.get('https://api.github.com')\nprint(response.json())\n\n# Making POST Requests\npayload = {'key': 'value'}\nresponse = requests.post('https://httpbin.org/post', data=payload)\nprint(response.json())\n\n# Handling JSON Data\ndata = response.json()\nprint(data)\n\n# Authenticating API Requests\nresponse = requests.get('https://api.github.com/user', auth=('username', 'token'))\nprint(response.json())"
+                    "title": "Error Handling",
+                    "description": "Learn how to handle exceptions using try-except blocks to prevent your program from crashing.",
+                    "codeExample": "# Example of a ZeroDivisionError\ntry:\n    result = 10 / 0\n    print(result)\nexcept ZeroDivisionError:\n    print(\"Error: Division by zero is not allowed.\")",
+                    "goal": "Write a program that prompts the user to enter two numbers and performs division. Use a try-except block to handle the `ZeroDivisionError` and `ValueError` gracefully.",
+                    "exercise": "# TODO: Write a program to handle potential errors during division."
+                },
+                {
+                    "title": "List Comprehensions",
+                    "description": "Discover a powerful and concise way to create lists using list comprehensions.",
+                    "codeExample": "# Create a list of squares of numbers from 1 to 10\nsquares = [x**2 for x in range(1, 11)]\nprint(squares)  # Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",
+                    "goal": "Write a program that uses a list comprehension to create a new list containing only the even numbers from a given list.",
+                    "exercise": "# TODO: Given a list, use a list comprehension to extract even numbers."
+                }
+            ]
+        },
+        {
+            "lesson": 5,
+            "title": "Lesson 5 - Object-Oriented Programming (OOP) Basics",
+            "description": "This lesson introduces the fundamental concepts of object-oriented programming (OOP) in Python, including classes, objects, inheritance, and polymorphism.",
+            "checkpoints": [
+                {
+                    "title": "Classes and Objects",
+                    "description": "Learn how to define classes, create objects from classes, and work with class attributes and methods.",
+                    "codeExample": "# Define a class named Dog\nclass Dog:\n    def __init__(self, name, breed):\n        self.name = name\n        self.breed = breed\n\n    def bark(self):\n        return \"Woof!\"\n\n# Create two Dog objects\ndog1 = Dog(\"Buddy\", \"Golden Retriever\")\ndog2 = Dog(\"Lucy\", \"Labrador\")\n\n# Access object attributes and methods\nprint(f\"{dog1.name} is a {dog1.breed}\")\nprint(f\"{dog2.name} is a {dog2.breed}\")\nprint(dog1.bark())  # Output: Woof!",
+                    "goal": "Create a `Cat` class with attributes for name, breed, and color. Include a `meow` method that returns \"Meow!\". Create a few `Cat` objects and access their attributes and methods.",
+                    "exercise": "# TODO: Define the 'Cat' class and create 'Cat' objects."
+                },
+                {
+                    "title": "Inheritance",
+                    "description": "Understand how to create new classes that inherit properties and methods from existing classes.",
+                    "codeExample": "# Base class Animal\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        return \"Animal sound\"\n\n# Derived class Dog inheriting from Animal\nclass Dog(Animal):\n    def speak(self):\n        return \"Bark!\"\n\n# Create objects of both classes\nanimal = Animal(\"Generic Animal\")\ndog = Dog(\"Buddy\")\n\n# Call the speak method\nprint(animal.speak())  # Output: Animal sound\nprint(dog.speak())    # Output: Bark!",
+                    "goal": "Create a `PersianCat` class that inherits from the `Cat` class you defined earlier. Override the `meow` method to return \"Purrrr...\" instead of \"Meow!\". Create a `PersianCat` object and test its methods.",
+                    "exercise": "# TODO: Define the 'PersianCat' class, inheriting from 'Cat'."
+                }
+            ]
+        },
+        {
+            "lesson": 6,
+            "title": "Lesson 6 - Working with APIs and Data Serialization",
+            "description": "This lesson explores how to interact with Application Programming Interfaces (APIs) to retrieve data from external sources and how to serialize data for storage and transmission.",
+            "checkpoints": [
+                {
+                    "title": "Making API Requests",
+                    "description": "Learn how to use the `requests` library to send HTTP requests to APIs and handle responses.",
+                    "codeExample": "# Import the requests library\nimport requests\n\n# Define the API endpoint\napi_url = \"https://api.example.com/data\"\n\n# Send a GET request\nresponse = requests.get(api_url)\n\n# Check the status code\nif response.status_code == 200:\n    # Parse the JSON response\n    data = response.json()\n    print(data)\nelse:\n    print(f\"Error: {response.status_code}\")",
+                    "goal": "Use the OpenWeatherMap API (https://openweathermap.org/api) to retrieve current weather data for a given city. You'll need to sign up for a free API key.",
+                    "exercise": "# TODO: Get weather data from OpenWeatherMap API for a user-provided city."
+                },
+                {
+                    "title": "Data Serialization with JSON",
+                    "description": "Understand how to serialize data into JSON format and deserialize JSON data back into Python objects.",
+                    "codeExample": "# Import the json library\nimport json\n\n# Python dictionary\ndata = {\n    \"name\": \"Alice\",\n    \"age\": 30,\n    \"city\": \"New York\"\n}\n\n# Serialize data to JSON string\njson_string = json.dumps(data)\nprint(json_string)  # Output: {\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}\n\n# Deserialize JSON string back to Python dictionary\nparsed_data = json.loads(json_string)\nprint(parsed_data)  # Output: {'name': 'Alice', 'age': 30, 'city': 'New York'}",
+                    "goal": "Fetch weather data from the OpenWeatherMap API as in the previous exercise. Then, serialize the relevant weather data (e.g., temperature, humidity, wind speed) into a JSON file named `weather_data.json`.",
+                    "exercise": "# TODO: Save the retrieved weather data into a JSON file."
                 }
             ]
         }
