@@ -5,6 +5,7 @@ import PythonCodeChunk from "./PythonCodeChunk";
 import React, { useState } from "react";
 import Link from "next/link";
 
+// Props for the lesson data
 interface LessonDataProps {
     lessonData: {
         lesson: number;
@@ -21,6 +22,7 @@ interface LessonDataProps {
 }
 
 const Lesson: React.FC<LessonDataProps> = (lessonData) => {
+    // Return the lesson with all the checkpoints
     return (
         <div className={styles.lessonArea}>
             <div className={styles.header}>
@@ -28,6 +30,7 @@ const Lesson: React.FC<LessonDataProps> = (lessonData) => {
                 <p>{lessonData.lessonData.description}</p>
             </div>
             <span className={styles.headerGap}></span>
+            {/* Mapping the array of the lessons generate the components depending on the size of the lesson */}
             {lessonData.lessonData.checkpoints.map(
                 (checkpoint: any, index: number) => (
                     <div className={styles.checkpoint}>

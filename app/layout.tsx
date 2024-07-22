@@ -17,6 +17,9 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
+    // Generic layout for all pages
+
     return (
         <html lang="en">
             <head>
