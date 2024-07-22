@@ -3,6 +3,7 @@ import Image from "next/image";
 
 export default function About() {
 
+  // Static about-us page content with styles
   return (
     <div className={styles.main}>
       <div className={styles.heroimg}>

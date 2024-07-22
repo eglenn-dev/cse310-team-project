@@ -2,6 +2,9 @@
 import styles from "./page.module.css";
 
 export default function Home() {
+
+    // Returning the static states of the home page with the applied styles
+
     return (
         <main className={styles.main}>
             <div className={styles.gradient}>

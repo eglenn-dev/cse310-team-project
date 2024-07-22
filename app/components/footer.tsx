@@ -1,11 +1,10 @@
-import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.css";
-import { url } from "inspector";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
-
+    
+    // Footer for all of the pages.
     return (
         <div className={styles.footer}>
             <div className={styles.container}>

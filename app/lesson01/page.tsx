@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 export default function Lesson01() {
     const [lessonData, setLessonData] = useState({} as any);
 
+    // Fetching the data for the lesson
     useEffect(() => {
         const fetchData = async () => {
             const lessonNumber = 1;
